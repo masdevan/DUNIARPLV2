@@ -5,33 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sekolah</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-center text-gray-700">Daftar Akun Sekolah</h2>
-        <form action="#" method="POST" class="space-y-4">
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-                <input type="text" id="name" name="name" required class="block w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500" placeholder="Nama Lengkap">
+<body>
+    <div class="content-wrapper">
+        <section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-light-600 text-white"
+            style="background-image: url('{{ asset('assets/img/photos/bg18.png') }}');">
+            <div class="container pt-17 pb-20 pt-md-19 pb-md-21 text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-1 mb-3">Sign Up</h1>
+                        <nav class="d-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
+                            </ol>
+                        </nav>
+                        <!-- /nav -->
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
             </div>
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="email" required class="block w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500" placeholder="example@sekolah.com">
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-light">
+            <div class="container pb-14 pb-md-16">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 col-xxl-5 mx-auto mt-n20">
+                        <div class="card">
+                            <div class="card-body p-11 text-center">
+                                <h2 class="mb-3 text-start">Sign Up RPL-Sata</h2>
+                                <p class="lead mb-6 text-start">Sign Up memerlukan waktu beberapa saat.</p>
+                                <form class="text-start mb-3">
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" placeholder="Name" id="loginName">
+                                        <label for="loginName">Nama</label>
+                                    </div>
+                                    <div class="form-floating mb-4">
+                                        <input type="email" class="form-control" placeholder="Email" id="loginEmail">
+                                        <label for="loginEmail">Email</label>
+                                    </div>
+                                    <div class="form-floating password-field mb-4">
+                                        <input type="password" class="form-control" placeholder="Password"
+                                            id="loginPassword">
+                                        <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                        <label for="loginPassword">Password</label>
+                                    </div>
+                                    <div class="form-floating password-field mb-4">
+                                        <input type="password" class="form-control" placeholder="Confirm Password"
+                                            id="loginPasswordConfirm">
+                                        <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                        <label for="loginPasswordConfirm">Konfirmasi Password</label>
+                                    </div>
+                                    <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">Daftar</a>
+                                </form>
+                                <!-- /form -->
+                                <p class="mb-0">Sudah punya akun? <a href="{{ route('sigin') }}" class="hover">Sign In</a></p>
+                                <div class="divider-icon my-4">atau</div>
+                                <nav class="nav social justify-content-center text-center">
+                                    <a href="#" class="btn btn-circle btn-sm btn-google"><i
+                                            class="uil uil-google"></i></a>
+                                    <a href="#" class="btn btn-circle btn-sm btn-facebook-f"><i
+                                            class="uil uil-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-circle btn-sm btn-twitter"><i
+                                            class="uil uil-twitter"></i></a>
+                                </nav>
+                                <!--/.social -->
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
             </div>
-            <div>
-                <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
-                <input type="password" id="password" name="password" required class="block w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500" placeholder="********">
-            </div>
-            <div>
-                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Konfirmasi Kata Sandi</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" required class="block w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500" placeholder="********">
-            </div>
-            <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition duration-200">Daftar</button>
-        </form>
-        <p class="text-center text-sm text-gray-600">Sudah punya akun? <a href="{{ route('sigin') }}" class="text-blue-600 hover:underline">Login Sekarang</a></p>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
     </div>
+    <!-- /.content-wrapper -->
 </body>
 
 </html>
