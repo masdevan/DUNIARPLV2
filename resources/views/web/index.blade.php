@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RPL-Sata</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="stylesheet" href="./assets/css/vendro">
+    
 </head>
 <body>
     <div class="content-wrapper">
@@ -1178,7 +1178,25 @@
           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
       </div>
-      <script src="./assets/js/plugins.js"></script>
+
+      <script src="./assets/js/vendor/clipboard.min.js"></script>
+      <script src="./assets/js/vendor/counterup.min.js"></script>
+      <script src="./assets/js/vendor/glightbox.js"></script>
+      <script src="./assets/js/vendor/headhesive.min.js"></script>
+      <script src="./assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+      <script src="./assets/js/vendor/isotope.pkgd.min.js"></script>
+      <script src="./assets/js/vendor/noframework.waypoints.min.js"></script>
+      <script src="./assets/js/vendor/picturefill.min.js"></script>
+      <script src="./assets/js/vendor/plyr.min.js"></script>
+      <script src="./assets/js/vendor/prism.js"></script>
+      <script src="./assets/js/vendor/progressbar.min.js"></script>
+      <script src="./assets/js/vendor/rellax.min.js"></script>
+      <script src="./assets/js/vendor/replaceme.min.js"></script>
+      <script src="./assets/js/vendor/scrollCue.min.js"></script>
+      <script src="./assets/js/vendor/smoothscroll.js"></script>
+      <script src="./assets/js/vendor/svg-inject.min.js"></script>
+      <script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+      <script src="./assets/js/vendor/typer.js"></script>
       <script src="./assets/js/theme.js"></script>
 </body>
 </html>
