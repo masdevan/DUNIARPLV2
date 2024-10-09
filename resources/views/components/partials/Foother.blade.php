@@ -3,8 +3,8 @@
     <div class="row gy-6 gy-lg-0">
       <div class="col-lg-4">
         <div class="widget">
-          <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
-          <p class="mb-4">© 2023 Sandbox. All rights reserved.</p>
+          <img class="mb-4" src="./assets/img/rpl.png" srcset="./assets/img/rpl.png 2x" alt="" style="max-width: 100px; height: auto;" />
+          <p class="mb-4">© 2024 RPL-Sata. All rights reserved.</p>
           <nav class="nav social social-white">
             <a href="#"><i class="uil uil-twitter"></i></a>
             <a href="#"><i class="uil uil-facebook-f"></i></a>
