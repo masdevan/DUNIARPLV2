@@ -10,18 +10,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- 404 Content -->
-    <section class="wrapper bg-light">
-        <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
-            <div class="row">
-                <div class="col-lg-9 col-xl-8 mx-auto">
+    <section class="wrapper bg-light flex-grow-1 d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-8">
                     <figure class="mb-10">
                         <img class="img-fluid" src="{{ asset('assets/ilustrations/404.png') }}" srcset="{{ asset('assets/ilustrations/404@2x.png') }} 2x" alt="404 Illustration">
                     </figure>
                 </div>
                 <!-- /column -->
-                <div class="col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <h1 class="mb-3">Oops! Halaman tidak dapat ditemukan.</h1>
                     <p class="lead mb-7 px-md-12 px-lg-5 px-xl-7">Halaman yang anda cari tidak tersedia. Coba cari halaman baru atau kembali ke beranda dengan tombol dibawah ini.</p>
                     <a href="{{ url('/') }}" class="btn btn-primary rounded-pill">Pergi ke beranda</a>
