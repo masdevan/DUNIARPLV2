@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SaranaSeeder::class,
             ArtikelSeeder::class,
+            GaleriSeeder::class,
         ]);
     }
 }
