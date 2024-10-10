@@ -28,16 +28,19 @@
                         <div class="card">
                             <div class="card-body p-11 text-center">
                                 <h2 class="mb-3 text-start">Selamat datang Kembali</h2>
-                                <p class="lead mb-6 text-start">Sign inkan Email dan Password untuk Sign in.</p>
-                                <form class="text-start mb-3">
+                                <p class="lead mb-6 text-start">Masukkan Email dan Password untuk Sign in.</p>
+
+                                <!-- Form -->
+                                <form action="{{ route('login') }}" method="POST" class="text-start mb-3">
+                                    @csrf
                                     <div class="form-floating mb-4">
                                         <input type="email" class="form-control" placeholder="Email" id="loginEmail"
-                                            required>
+                                            name="email" required>
                                         <label for="loginEmail">Email</label>
                                     </div>
                                     <div class="form-floating password-field mb-4">
                                         <input type="password" class="form-control" placeholder="Password"
-                                            id="loginPassword" required>
+                                            id="loginPassword" name="password" required>
                                         <span class="password-toggle"><i class="uil uil-eye"></i></span>
                                         <label for="loginPassword">Password</label>
                                     </div>
@@ -45,8 +48,11 @@
                                         class="btn btn-primary rounded-pill btn-login w-100 mb-2">Sign in</button>
                                 </form>
                                 <!-- /form -->
-                                <p class="mb-0">Belum punya akun? <a href="{{ route('signup') }}" class="hover">Sign
-                                        Up</a></p>
+
+                                <!-- Daftar Link -->
+                                <p class="mb-0">Belum punya akun? <a href="{{ route('register') }}" class="hover">Sign Up</a></p>
+
+                                <!-- Social Media Login -->
                                 <div class="divider-icon my-4">atau</div>
                                 <nav class="nav social justify-content-center text-center">
                                     <a href="#" class="btn btn-circle btn-sm btn-google"><i
