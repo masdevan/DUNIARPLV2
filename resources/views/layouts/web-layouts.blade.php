@@ -20,9 +20,9 @@
     {{-- end: headers --}}
 
     {{ $slot }}
-    
+
   </div>
-  <x-partials.foother />
+  <x-partials.footer />
   <x-partials.progress-wrap/>
   <x-partials.scripts>
     {{-- masukan script lainya disini atau langsung msukan ke partials/scripts --}}
