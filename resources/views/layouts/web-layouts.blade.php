@@ -2,6 +2,12 @@
 <html lang="en">
 
 <x-partials.head>
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/glightbox.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/plyr.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/prism.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/scrollcue.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.css') }}">
   <title>RPL-Sata | {{ $title }}</title>
   {{-- ...dll --}}
 </x-partials.head>

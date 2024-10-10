@@ -1,4 +1,12 @@
 'use strict';
+import 'bootstrap';
+import Plyr from 'plyr';
+import 'plyr/dist/plyr.css'; 
+import 'swiper/swiper-bundle.css';
+import SVGInject from 'svg-inject';
+import Swiper from 'swiper/bundle'; 
+import 'bootstrap/dist/css/bootstrap.min.css';  
+
 var theme = {
   /**
    * Theme's components/functions list
@@ -7,26 +15,21 @@ var theme = {
    * Do not forget to remove dependency from src/js/vendor/ and recompile.
    */
   init: function () {
+    theme.backgroundImage();
+    theme.backgroundImageMobile();
     theme.stickyHeader();
-    theme.subMenu();
-    theme.offCanvas();
     theme.isotope();
     theme.onepageHeaderOffset();
     theme.spyScroll();
     theme.anchorSmoothScroll();
-    theme.svgInject();
-    theme.backgroundImage();
-    theme.backgroundImageMobile();
     theme.imageHoverOverlay();
     theme.rellax();
-    theme.scrollCue();
     theme.swiperSlider();
     theme.lightbox();
     theme.plyr();
     theme.progressBar();
     theme.loader();
     theme.pageProgress();
-    theme.counterUp();
     theme.bsTooltips();
     theme.bsPopovers();
     theme.bsModal();
@@ -36,6 +39,12 @@ var theme = {
     theme.pricingSwitcher();
     theme.textRotator();
     theme.codeSnippet();
+    theme.counterUp();
+    //
+    theme.scrollCue();
+    theme.subMenu();
+    theme.svgInject();
+    theme.offCanvas();
   },
   /**
    * Sticky Header
@@ -269,6 +278,8 @@ var theme = {
     var bg = document.querySelectorAll(".bg-image");
     for(var i = 0; i < bg.length; i++) {
       var url = bg[i].getAttribute('data-image-src');
+      console.log("🚀 ~ url:", url)
+      
       bg[i].style.backgroundImage = "url('" + url + "')";
     }
   },
@@ -912,4 +923,6 @@ var theme = {
     });
   },
 }
-theme.init();
+document.addEventListener('DOMContentLoaded', function () {
+  theme.init();
+});
