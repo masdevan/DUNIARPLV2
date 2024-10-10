@@ -1,174 +1,305 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>ADMIN CONTROL PANEL</title>
-    <meta name="description" content="ADMIN DASHBOARD RPLV2">
-    <meta name="author" content="DASHBOARD">
-    <meta name="robots" content="noindex, nofollow">
-    <meta property="og:title" content="ADMIN DASHBOARD RPLV2">
-    <meta property="og:site_name" content="DASHBOARD">
-    <meta property="og:description" content="ADMIN DASHBOARD RPLV2">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
-    <link rel="stylesheet" id="css-main" href="{{ asset('css/codebase.css') }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://kit.fontawesome.com/c27bad3882.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
-
-      <!--[ Sidebar Extra Modified ]-->
-      <nav id="sidebar">
-        <div class="sidebar-content">
-          <div class="content-header justify-content-lg-center">
-            <div>
-              <span class="smini-visible fw-bold tracking-wide fs-lg">
-                c<span class="text-primary">b</span>
-              </span>
-              <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
-                <span class="smini-hidden">
-                  <i class="fa fa-fire text-primary"></i>
-                  <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
-                </span>
-              </a>
-            </div>
-            <div>
-              <button type="button" class="btn btn-sm btn-alt-danger d-lg-none" data-toggle="layout" data-action="sidebar_close">
-                <i class="fa fa-fw fa-times"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="js-sidebar-scroll">
-            <div class="content-side content-side-full">
-              <ul class="nav-main">
-                <li class="nav-main-item">
-                  <a class="nav-main-link" href="be_pages_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-house-user"></i>
-                    <span class="nav-main-link-name">Dashboard</span>
-                  </a>
-                </li>
-                <li class="nav-main-heading">User Interface</li>
-
-                <li class="nav-main-item">
-                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon fa fa-layer-group"></i>
-                    <span class="nav-main-link-name">Elements</span>
-                  </a>
-                  <ul class="nav-main-submenu">
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="be_ui_grid.html">
-                        <span class="nav-main-link-name">Grid</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="be_ui_icons.html">
-                        <span class="nav-main-link-name">Icons</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                      <i class="nav-main-link-icon fa fa-layer-group"></i>
-                      <span class="nav-main-link-name">Elements</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                      <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_ui_grid.html">
-                          <span class="nav-main-link-name">Grid</span>
-                        </a>
-                      </li>
-                      <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_ui_icons.html">
-                          <span class="nav-main-link-name">Icons</span>
-                        </a>
-                      </li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+@extends('admin.layout')
+@section('title', 'Admin Dashboard')
+@section('content')
       <!-- Header -->
-      <header id="page-header">
-        <div class="content-header">
-            <!--[ Left Header Modified ]-->
-            <div class="space-x-1">
-                <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
-                <i class="fa fa-fw fa-bars"></i>
-                </button>
-            </div>
-
-            <!--[ Right Header Modified ]-->
-            <div class="space-x-1">
-                <div class="dropdown d-inline-block">
-                <button type="button" class="btn btn-sm btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-user d-sm-none"></i>
-                    <span class="d-none d-sm-inline-block fw-semibold">J. Smith</span>
-                    <i class="fa fa-angle-down opacity-50 ms-1"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
-                    <div class="px-2 py-3 bg-body-light rounded-top">
-                    <h5 class="h6 text-center mb-0">
-                        John Smith
-                    </h5>
-                    </div>
-                    <div class="p-2">
-                    <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="be_pages_generic_profile.html">
-                        <span>Profile</span>
-                        <i class="fa fa-fw fa-user opacity-25"></i>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_inbox.html">
-                        <span>Inbox</span>
-                        <i class="fa fa-fw fa-envelope-open opacity-25"></i>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="be_pages_generic_invoice.html">
-                        <span>Invoices</span>
-                        <i class="fa fa-fw fa-file opacity-25"></i>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="op_auth_signin.html">
-                        <span>Sign Out</span>
-                        <i class="fa fa-fw fa-sign-out-alt opacity-25"></i>
-                    </a>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-      </header>
-
-      <!-- Main Container -->
-      <main id="main-container">
-        <!-- Page Content -->
-        <div class="content">
-            test
-        </div>
-      </main>
-
-      <!--[ Footer Performed Mode Modified ]-->
-      <footer id="page-footer">
-        <div class="content py-3">
-          <div class="row fs-sm">
-            <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
-              CRAFTED BY <i class="fa fa-heart text-danger"></i> SMKN 1 TENGARAN</a>
-            </div>
-            <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
-              <a class="fw-semibold" href="https://1.envato.market/95j" target="_blank">DUNIARPLV2 </a> &copy; <span data-toggle="year-copy"></span>
-            </div>
+      <div class="block block-rounded bg-gd-dusk">
+        <div class="block-content bg-white-5">
+          <div class="py-4 text-center">
+            <h1 class="h2 fw-bold text-white mb-2">Dashboard</h1>
+            <h2 class="h5 fw-medium text-white-75">Welcome Admin, create something amazing!</h2>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <!-- END Header -->
 
-    <!--[ Main Scripting Modified ]-->
-    <script src="{{ asset('js/codebase.app.min.js') }}"></script>
-    <script src="{{ asset('js/chart.min.js') }}"></script>
-    <script src="{{ asset('js/be_pages_dashboard.min.js') }}"></script>
-  </body>
-</html>
+      <!-- Quick Stats -->
+      <h2 class="content-heading">
+        <i class="fa fa-chart-line opacity-50 opacity-50 me-1"></i> Quick Stats
+      </h2>
+      <div class="row items-push">
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                105
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                Sales/Week
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                58.25
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                MB/s
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                $983
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                Earnings
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                21
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                Messages
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                12
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                Products
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <a class="block block-rounded block-link-pop text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="block-content">
+              <p class="fs-2 fw-bold mb-1">
+                36
+              </p>
+              <p class="fs-sm fw-semibold text-muted">
+                Tickets
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- END Quick Stats -->
+
+      <!-- Latest Projects -->
+      <h2 class="content-heading">
+        <i class="fa fa-briefcase text-muted opacity-50 me-1"></i> Latest Projects
+      </h2>
+      <div class="row items-push">
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-link-shadow block-rounded ribbon ribbon-modern ribbon-primary text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="ribbon-box">$14</div>
+            <div class="block-content block-content-full">
+              <div class="item item-circle bg-pulse text-pulse-lighter mx-auto my-3">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="text-warning mb-1">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+              </div>
+              <div class="fs-sm fw-medium text-muted">
+                258 reviews
+              </div>
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fs-sm fw-medium text-muted">10 lessons • 5 hours</div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="fw-semibold">Learn HTML5 in 10 easy steps</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-link-shadow block-rounded ribbon ribbon-modern ribbon-primary text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="ribbon-box">$29</div>
+            <div class="block-content block-content-full">
+              <div class="item item-circle bg-info text-info-light mx-auto my-3">
+                <i class="fab fa-css3"></i>
+              </div>
+              <div class="text-warning mb-1">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+              </div>
+              <div class="fs-sm fw-medium text-muted">
+                75 reviews
+              </div>
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fs-sm fw-medium text-muted">15 lessons • 11 hours</div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="fw-semibold">Be a pro with CSS3 in one week</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-link-shadow block-rounded ribbon ribbon-modern ribbon-primary text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="ribbon-box">$24</div>
+            <div class="block-content block-content-full">
+              <div class="item item-circle bg-corporate text-corporate-lighter mx-auto my-3">
+                <i class="fa fa-video"></i>
+              </div>
+              <div class="text-warning mb-1">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star-half-alt"></i>
+              </div>
+              <div class="fs-sm fw-medium text-muted">
+                985 reviews
+              </div>
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fs-sm fw-medium text-muted">8 lessons • 3 hours</div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="fw-semibold">Be a Youtuber today</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-link-shadow block-rounded ribbon ribbon-modern ribbon-primary text-center h-100 mb-0" href="javascript:void(0)">
+            <div class="ribbon-box">$14</div>
+            <div class="block-content block-content-full">
+              <div class="item item-circle bg-elegance text-elegance-lighter mx-auto my-3">
+                <i class="fa fa-briefcase"></i>
+              </div>
+              <div class="text-warning mb-1">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star-half-alt"></i>
+              </div>
+              <div class="fs-sm fw-medium text-muted">
+                325 reviews
+              </div>
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fs-sm fw-medium text-muted">25 lessons • 17 hours</div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="fw-semibold">Marketing Tips 101</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- END Latest Projects -->
+
+      <!-- Top Contributors -->
+      <h2 class="content-heading">
+        <i class="fa fa-star text-muted opacity-50 me-1"></i> Top Contributors
+      </h2>
+      <div class="row">
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
+            <div class="block-content block-content-full">
+              <img class="img-avatar" src="assets/media/avatars/avatar2.jpg" alt="">
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fw-semibold mb-1">Melissa Rice</div>
+              <div class="fs-sm fw-medium text-muted">Photographer</div>
+            </div>
+            <div class="block-content">
+              <div class="row items-push text-center">
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-wallet fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">$3.090</div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-trophy fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">4 Awards</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
+            <div class="block-content block-content-full">
+              <img class="img-avatar" src="assets/media/avatars/avatar8.jpg" alt="">
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fw-semibold mb-1">Danielle Jones</div>
+              <div class="fs-sm fw-medium text-muted">Copywriter</div>
+            </div>
+            <div class="block-content">
+              <div class="row items-push text-center">
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-briefcase fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">35 Projects</div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-users fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">350 Users</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
+            <div class="block-content block-content-full">
+              <img class="img-avatar" src="assets/media/avatars/avatar12.jpg" alt="">
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fw-semibold mb-1">Jesse Fisher</div>
+              <div class="fs-sm fw-medium text-muted">Web Designer</div>
+            </div>
+            <div class="block-content">
+              <div class="row items-push text-center">
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-badge fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">8 Badges</div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-wallet fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">$3.100</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
+            <div class="block-content block-content-full">
+              <img class="img-avatar" src="assets/media/avatars/avatar16.jpg" alt="">
+            </div>
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="fw-semibold mb-1">Ryan Flores</div>
+              <div class="fs-sm fw-medium text-muted">Web Developer</div>
+            </div>
+            <div class="block-content">
+              <div class="row items-push">
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-notebook fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">4 Notes</div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2"><i class="si si-camera fa-2x"></i></div>
+                  <div class="fs-sm fw-medium text-muted">14 Photos</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+@endsection
