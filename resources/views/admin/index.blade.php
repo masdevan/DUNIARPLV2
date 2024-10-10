@@ -14,7 +14,7 @@
 
       <!-- Quick Stats -->
       <h2 class="content-heading">
-        <i class="fa fa-chart-line opacity-50 opacity-50 me-1"></i> Quick Stats
+        <i class="fa fa-chart-line opacity-50 me-1"></i> Quick Stats
       </h2>
       <div class="row items-push">
         <div class="col-6 col-md-4 col-xl-2">
