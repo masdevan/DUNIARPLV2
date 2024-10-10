@@ -1,8 +1,8 @@
 <x-layouts.web-layouts>
     <div class="content-wrapper">
         <div class="container">
-            <section class="wrapper bg-soft-primary">
-                <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+            <section class="wrapper bg-soft-primary pb-md-16">
+                <div class="container pt-19 pb-10 pt-md-20 pb-md-14 text-center">
                     <div class="row">
                         <div class="col-md-7 col-lg-6 col-xl-5 mx-auto">
                             <h1 class="display-1 mb-3">Blog RPL</h1>

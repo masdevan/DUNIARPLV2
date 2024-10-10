@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sekolah</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
+<x-layouts.web-layouts>
     <div class="content-wrapper">
         <section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-light-600 text-white"
             style="background-image: url('{{ asset('assets/img/photos/bg18.png') }}');">
@@ -63,7 +53,8 @@
                                     <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">Daftar</a>
                                 </form>
                                 <!-- /form -->
-                                <p class="mb-0">Sudah punya akun? <a href="{{ route('sigin') }}" class="hover">Sign In</a></p>
+                                <p class="mb-0">Sudah punya akun? <a href="{{ route('sigin') }}" class="hover">Sign
+                                        In</a></p>
                                 <div class="divider-icon my-4">atau</div>
                                 <nav class="nav social justify-content-center text-center">
                                     <a href="#" class="btn btn-circle btn-sm btn-google"><i
@@ -88,6 +79,4 @@
         <!-- /section -->
     </div>
     <!-- /.content-wrapper -->
-</body>
-
-</html>
+</x-layouts.web-layouts>

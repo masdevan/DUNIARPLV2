@@ -20,16 +20,16 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             style="color: black;">Profile Jurusan</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="dropdown-item" href="./pricing.html"
+                            <li class="nav-item"><a class="dropdown-item" href="{{ route('about') }}"
                                     style="color: black;">Tentang Kami</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="./pricing.html"
+                            <li class="nav-item"><a class="dropdown-item" href="{{ route('teacher') }}"
                                     style="color: black;">Guru</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="./onepage.html"
+                            <li class="nav-item"><a class="dropdown-item" href="{{ route('sarana') }}"
                                     style="color: black;">Sarana Prasarana</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog') }}" style="color: black;">Artikel</a>
+                        <a class="nav-link" href="{{ route('blog') }}" style="color: black;">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('galery') }}" style="color: black;">Galeri</a>
