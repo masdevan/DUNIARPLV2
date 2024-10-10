@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\GuruController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AccessController;
+use App\Http\Controllers\Admin\GaleryController;
+use App\Http\Controllers\Admin\SaranaController;
+use App\Http\Controllers\Admin\SystemController;
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\PartnerController;
 
 // Main Laravel Routing
 Route::get('/', function () {return view('web.index');});
@@ -16,8 +23,15 @@ Route::get('/blog/detail', function () {return view('blogs.blog-detail');})->nam
 
 Route::get('/galery', function () {return view('galery.index');})->name('galery');
 
-Route::get('/login', function() {return view('log.login');})->name('sigin'); 
-Route::get('/signup', function() {return view('log.signup');})->name('signup'); 
+Route::get('/login', function() {return view('log.login');})->name('sigin');
+Route::get('/signup', function() {return view('log.signup');})->name('signup');
 
-// / Main Admin Routing
+// Main Admin Routing
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin/article', [ArticleController::class, 'index'])->name('admin.article');
+Route::get('/admin/access', [AccessController::class, 'index'])->name('admin.access');
+Route::get('/admin/galery', [GaleryController::class, 'index'])->name('admin.galery');
+Route::get('/admin/sarana', [SaranaController::class, 'index'])->name('admin.sarana');
+Route::get('/admin/guru', [GuruController::class, 'index'])->name('admin.guru');
+Route::get('/admin/partner', [PartnerController::class, 'index'])->name('admin.partner');
+Route::get('/admin/system', [SystemController::class, 'index'])->name('admin.system');
