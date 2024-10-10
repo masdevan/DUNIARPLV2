@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminController;
 
+// Main Laravel Routing
 Route::get('/', function () {return view('web.index');});
 
 Route::get('/about', function () {return view('profiles.about');})->name('about');

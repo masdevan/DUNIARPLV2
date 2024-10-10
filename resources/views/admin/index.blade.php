@@ -12,6 +12,7 @@
     <meta property="og:description" content="ADMIN DASHBOARD RPLV2">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
+    <link rel="stylesheet" id="css-main" href="{{ asset('css/codebase.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://kit.fontawesome.com/c27bad3882.js" crossorigin="anonymous"></script>
   </head>
@@ -166,6 +167,8 @@
     </div>
 
     <!--[ Main Scripting Modified ]-->
-    @vite(['resources/js/app.js'])
+    <script src="{{ asset('js/codebase.app.min.js') }}"></script>
+    <script src="{{ asset('js/chart.min.js') }}"></script>
+    <script src="{{ asset('js/be_pages_dashboard.min.js') }}"></script>
   </body>
 </html>
