@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @extends('admin.partials.head')
+    <x-admin.partials.head/>
+    <title> | {{ $title }}</title>
   </head>
   <body>
     <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
       <!--[ Sidebar Extra Modified ]-->
-      @include('admin.partials.sidebar')
+      <x-admin.partials.sidebar/>
       <!-- Header -->
-      @include('admin.partials.header')
-
+      <x-admin.partials.header/>
+      
       <!-- Main Container -->
       <main id="main-container">
         <!-- Page Content -->
         <div class="content">
-            @yield('content')
+          {{ $slot }}
         </div>
       </main>
-
+      
       <!--[ Footer Performed Mode Modified ]-->
-      @include('admin.partials.footer')
+      <x-admin.partials.footer/>
     </div>
     <!--[ Main Scripting Modified ]-->
-    @include('admin.partials.script-manager')
+    <x-admin.partials.script-manager/>
   </body>
 </html>

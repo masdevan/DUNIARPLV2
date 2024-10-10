@@ -1,5 +1,3 @@
-@extends('admin.layout')
-@section('title', 'Admin Dashboard')
-@section('content')
-UPCOMING
-@endsection
+<x-layouts.admin-layouts>
+  UPCOMING
+</x-layouts.admin-layouts>

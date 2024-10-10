@@ -1,6 +1,5 @@
-@extends('admin.layout')
-@section('title', 'Admin Dashboard')
-@section('content')
+<x-layouts.admin-layouts>
+
     <div class="content">
         <!-- Cover Link Stories -->
         <h2 class="content-heading">List Your Article</h2>
@@ -205,4 +204,4 @@
         </div>
         <!-- END Cover Link Stories -->
     </div>
-@endsection
+</x-layouts.admin-layouts>
